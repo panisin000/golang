@@ -13,7 +13,22 @@ func Hello(name string) (string, error) {
     }
     return fmt.Sprintf(randomFormat(), name), nil
 }
-
+func Hellos(names []string)  (map[string]string,error) {
+	// messages:=map[string]string{
+	// 	"ABC":"Hegbr",
+	// }
+	messages:=make(map[string]string) //map ว่าง
+	for _,name:=range names {
+	 message,err:=Hello(name)
+	 if err!= nil{
+		return nil,err
+	 }
+	 messages[name]=message
+	}
+	return messages,nil
+}
+    
+   
 func init() {
     rand.Seed(time.Now().UnixNano())
 }

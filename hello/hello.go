@@ -12,7 +12,7 @@ func main() {
 	if err!= nil{
 		log.Fatal(err)
 	}
-    
+    greetings.Hello([]string{"ABC","DEF"})
 	greetings.randomFormat()
 	fmt.Println(message)
 }
