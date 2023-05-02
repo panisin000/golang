@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/panisin000/golang"
+
+	"github.com/panisin000/golang/greetings"
 )
 
 func main() {
@@ -11,5 +12,7 @@ func main() {
 	if err!= nil{
 		log.Fatal(err)
 	}
-    fmt.Println(message)
+    
+	greetings.randomFormat()
+	fmt.Println(message)
 }
